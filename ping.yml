@@ -1,0 +1,7 @@
+---
+ - name: This playbook describes about ping Module
+   hosts: WEB
+   tasks:
+      - name: Ping module
+        ping: 
+...
