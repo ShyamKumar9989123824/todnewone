@@ -1,0 +1,22 @@
+---
+ - name: Install multiple packages
+   hosts: WEB
+   tasks:
+     - name: Install packages
+       yum:
+         name:
+           - nginx
+           - ftp
+           - vsftpd
+         state: present
+
+     - name: To run the packages
+       service:
+         name: nginx
+         state: started
+         name: ftp
+         state: started
+         name: vsftpd
+         state: started
+              
+...
