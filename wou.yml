@@ -1,0 +1,12 @@
+---
+ - name: to create multiple directories
+   hosts: WEB
+   tasks:
+   - name: Create directories yar
+     command: mkdir /tmp/"{{item}}"
+     with_items:
+        - s
+        - s1
+        - s2
+        - s3
+...
